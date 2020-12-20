@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/ncu_cp_score_calculator/static/js/main.fec301f8.chunk.js",
+    "main.js.map": "/ncu_cp_score_calculator/static/js/main.fec301f8.chunk.js.map",
+    "runtime-main.js": "/ncu_cp_score_calculator/static/js/runtime-main.986acdb7.js",
+    "runtime-main.js.map": "/ncu_cp_score_calculator/static/js/runtime-main.986acdb7.js.map",
+    "static/js/2.e4e2f1d8.chunk.js": "/ncu_cp_score_calculator/static/js/2.e4e2f1d8.chunk.js",
+    "static/js/2.e4e2f1d8.chunk.js.map": "/ncu_cp_score_calculator/static/js/2.e4e2f1d8.chunk.js.map",
+    "index.html": "/ncu_cp_score_calculator/index.html",
+    "static/js/2.e4e2f1d8.chunk.js.LICENSE.txt": "/ncu_cp_score_calculator/static/js/2.e4e2f1d8.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.986acdb7.js",
+    "static/js/2.e4e2f1d8.chunk.js",
+    "static/js/main.fec301f8.chunk.js"
+  ]
+}
