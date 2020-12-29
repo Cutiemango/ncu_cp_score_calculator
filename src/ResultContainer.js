@@ -19,7 +19,7 @@ function ResultContainer({submissions, rating, contests}) {
         5: ["F", "G"],
         6: ["C", "D", "E"]
     };
-    const ratingScore = {800: 2, 1299: 5, 1599: 10, 1899: 15}
+    const ratingScore = {800: 2, 1299: 5, 1599: 10, 1899: 15, 3000: 100}
 
     let result = {1: [], 2: [], 3: [], 4: [], 5: [], 6: []};
     let solvedBasics = 0, solvedBonus = 0;
@@ -88,7 +88,7 @@ function ResultContainer({submissions, rating, contests}) {
         for (var key in ratingScore)
             if (rating < key)
                 return ratingScore[key];
-        return 100;
+        return 0;
     }
 
     const renderInfo = () => {

@@ -7,9 +7,9 @@ function UIContainer()
     const CONTESTID_THRESHOLD = 1409;
 
     const [credentials, setCredentials] = useState({
-        handle: "default handle",
-        key: "default key",
-        secret: "default secret"
+        handle: "",
+        key: "",
+        secret: ""
     });
     const [submissions, setSubmissions] = useState([]);
     const [rating, setRating] = useState(-1);
@@ -84,7 +84,7 @@ function UIContainer()
             .then((response) => response.json())
             .then(
                 (data) => {
-                    setRating(data.result[0].rating);
+                    setRating(data.result[0].hasProperty("rating") ? data.result[0].rating : -1);
                 },
                 (error) => {
                     console.log('Error: ', error);
