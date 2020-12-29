@@ -84,7 +84,7 @@ function ResultContainer({submissions, rating, contests}) {
     }
 
     const getExtraScore = (rating) => {
-        if (rating === -1) return 0;
+        if (rating === undefined || rating === -1) return 0;
         for (var key in ratingScore)
             if (rating < key)
                 return ratingScore[key];
