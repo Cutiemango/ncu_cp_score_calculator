@@ -84,7 +84,7 @@ function UIContainer()
             .then((response) => response.json())
             .then(
                 (data) => {
-                    setRating(data.result[0].hasProperty("rating") ? data.result[0].rating : -1);
+                    setRating(data.result[0].rating === undefined ? -1 : data.result[0].rating);
                 },
                 (error) => {
                     console.log('Error: ', error);
