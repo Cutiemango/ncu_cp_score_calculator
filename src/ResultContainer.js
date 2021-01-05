@@ -1,7 +1,12 @@
 import React, {Fragment} from 'react';
 
 function ResultContainer({submissions, rating, contests}) {
-    const contestList = {295849: 1, 296944: 2, 298568: 3, 301125: 4, 304895: 5, 308133: 6};
+    const contestList = {295849: {index: 1, maxProb: "J"},
+                         296944: {index: 2, maxProb: "G"},
+                         298568: {index: 3, maxProb: "H"},
+                         301125: {index: 4, maxProb: "D"},
+                         304895: {index: 5, maxProb: "I"},
+                         308133: {index: 6, maxProb: "K"}};
     const problemIDs = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K"];
     const basicProblems = {
         1: [],
@@ -29,7 +34,7 @@ function ResultContainer({submissions, rating, contests}) {
         submissions.forEach(submission => {
             if (submission.verdict === "OK" && contestList.hasOwnProperty(submission.contestId))
             {
-                const contestNo = contestList[submission.contestId];
+                const contestNo = contestList[submission.contestId].index;
                 let solved = result[contestNo];
                 if (!solved.includes(submission.problem.index))
                     solved.push(submission.problem.index);
@@ -51,19 +56,21 @@ function ResultContainer({submissions, rating, contests}) {
 
     const renderRow = () => {
         return Object.keys(contestList).map((id, _) => {
-            const index = contestList[id], solved = result[index];
+            const index = contestList[id].index, maxProb = contestList[id].maxProb, solved = result[index];
             return (
                 <tr key={id}>
                     <td>{index}</td>
                     {problemIDs.map((pID, pIndex) => {
+                        if (pID > maxProb)
+                            return <td key={pIndex}> </td>;
                         const isBasic = basicProblems[index].includes(pID), isBonus = bonusProblems[index].includes(pID), hasSolved = solved.includes(pID);
                         if (hasSolved)
                         {
                             if (isBasic) solvedBasics++;
                             else if (isBonus) solvedBonus++;
-                            return <td key={pIndex}>{isBasic || isBonus ? "✓" : "+"}</td>;
+                            return <td key={pIndex}>{isBasic || isBonus ? "✓" : "∨"}</td>;
                         }
-                        return <td key={pIndex}>{isBasic || isBonus ? "✗" : " "}</td>;
+                        return <td key={pIndex}>{isBasic || isBonus ? "✗" : "？"}</td>;
                     })}
                 </tr>
             );
@@ -109,10 +116,10 @@ function ResultContainer({submissions, rating, contests}) {
     return (
         <Fragment>
             <h1 id='title'>Fetch Results: </h1>
-            <h4>+ = not assigned problems, accepted</h4>
+            <h4>∨ = not assigned problems, accepted</h4>
             <h4>✓ = assigned problems, accepted</h4>
             <h4>✗ = assigned problems, not finished</h4>
-            <h4>(blank) = no record</h4>
+            <h4>？ = no record</h4>
             {renderTable()}
             {renderInfo()}
         </Fragment>
