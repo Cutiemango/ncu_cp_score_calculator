@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/ncu_cp_score_calculator/static/js/main.edd1fe6f.chunk.js",
-    "main.js.map": "/ncu_cp_score_calculator/static/js/main.edd1fe6f.chunk.js.map",
+    "main.js": "/ncu_cp_score_calculator/static/js/main.8b196437.chunk.js",
+    "main.js.map": "/ncu_cp_score_calculator/static/js/main.8b196437.chunk.js.map",
     "runtime-main.js": "/ncu_cp_score_calculator/static/js/runtime-main.986acdb7.js",
     "runtime-main.js.map": "/ncu_cp_score_calculator/static/js/runtime-main.986acdb7.js.map",
-    "static/js/2.e4e2f1d8.chunk.js": "/ncu_cp_score_calculator/static/js/2.e4e2f1d8.chunk.js",
-    "static/js/2.e4e2f1d8.chunk.js.map": "/ncu_cp_score_calculator/static/js/2.e4e2f1d8.chunk.js.map",
+    "static/js/2.2cc663fe.chunk.js": "/ncu_cp_score_calculator/static/js/2.2cc663fe.chunk.js",
+    "static/js/2.2cc663fe.chunk.js.map": "/ncu_cp_score_calculator/static/js/2.2cc663fe.chunk.js.map",
     "index.html": "/ncu_cp_score_calculator/index.html",
-    "static/js/2.e4e2f1d8.chunk.js.LICENSE.txt": "/ncu_cp_score_calculator/static/js/2.e4e2f1d8.chunk.js.LICENSE.txt"
+    "static/js/2.2cc663fe.chunk.js.LICENSE.txt": "/ncu_cp_score_calculator/static/js/2.2cc663fe.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.986acdb7.js",
-    "static/js/2.e4e2f1d8.chunk.js",
-    "static/js/main.edd1fe6f.chunk.js"
+    "static/js/2.2cc663fe.chunk.js",
+    "static/js/main.8b196437.chunk.js"
   ]
 }
